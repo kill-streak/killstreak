@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://septicwave.fun/ -->
+<html xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="https://ogp.me/ns#" class="gr__killstreak_xyz"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>KillStreak</title>
+
+
+    
+    <meta content="" property="og:description">
+    <meta content="killstreak" property="og:title">
+    <meta content="" property="og:site_name">
+    <link rel="icon" href="https://kill-streak.github.io/">
+    <meta content="https://kill-streak.github.io" property="og:image">
+    <meta content="image/png" property="og:image:type">
+    <meta content="1000" property="og:image:width">
+    <meta content="1000" property="og:image:height">
+    <meta name="theme-color" content="#5c5166">
+
+</head>
+<body data-gr-c-s-loaded="true">
+<br>
+<link href="./brazy_files/css" rel="stylesheet">
+<script src="./brazy_files/snap.svg-min.js.download"></script>
+<style type="text/css">
+                ::-webkit-scrollbar {
+            width: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 1);
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 1);
+        }
+    body {
+        background-color:  #5c5166;
+        color: white;
+    }
+    svg {
+        color: white;
+    }
+    .image-cropper {
+      width: 175px;
+      height: 175px;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+    }
+    #logo {
+      display: block;
+      margin: -60px auto;
+      height: 135%;
+      width: auto;
+      image-rendering: optimizeSpeed;
+      /* GO AWAY ANTI-ALIASING! PIXEL ART DOESN'T WANT YOU HERE!*/
+      image-rendering: -moz-crisp-edges;
+      /* Firefox */
+      image-rendering: -o-crisp-edges;
+      /* Opera */
+      image-rendering: -webkit-optimize-contrast;
+      /* Chrome/Safari*/
+      image-rendering: pixelated;
+      /* Chrome again....*/
+      image-rendering: optimize-contrast;
+      /* CSS3 Proposed */
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE8+ */
+    }
+    
+    .social {
+      height: 85px;
+      width: auto;
+      padding: 5px;
+    }
+    div {
+      width: auto;
+      margin: 0px auto;
+      text-align: center;
+    }
+    .rand {
+      text-align: center;
+      font-size: 16px;
+      font-style: italic;
+      font-family: Montserrat, sans-serif;
+      padding: 5px;
+      
+    }
+</style>
+<p></p>
+
+<p></p>
+
+<div>
+<div class="image-cropper"><img class="rounded" id="logo" src="./brazy_files/image.jpg"></div>
+</div>
+<!--Title-->
+
+<div id="container">
+<svg xmlns="http://www.w3.org/2000/svg" id="title" viewBox="0 0 1425 350" width="250px">
+  
+<defs></defs><path fill="#2980b9" stroke="#0066cc" style=""></path><text x="0" y="75%" style="font-size: 260px; font-family: Monsterrat, sans-serif; font-weight: 600;"></text></svg>
+</div>
+
+<script>
+    window.onload = function () {
+
+	var blue = '#2980b9';
+	var l = Snap('#title');
+	var p = l.select('path');
+
+	l.append(p);
+
+	p.attr({
+		fill: blue,
+		stroke: '#0066CC',
+	});
+
+	setTimeout( function() {
+		// modify this one line below, and see the result !
+		var logoTitle = 'kill streak';
+		var logoRandom = '';
+		var logoTitleContainer = l.text(0, '75%', '');
+		var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+		logoTitleContainer.attr({
+			fontSize: 300,
+			fontFamily: 'Monsterrat, sans-serif',
+			fontWeight: '600'
+		});
+
+		function generateRandomTitle(i, logoRandom) {
+			setTimeout( function() {
+				logoTitleContainer.attr({ text: logoRandom });
+			}, i*70 );
+		}
+
+		for( var i=0; i < logoTitle.length+1; i++ ) {
+			logoRandom = logoTitle.substr(0, i);
+			for( var j=i; j < logoTitle.length; j++ ) { 
+				logoRandom += possible.charAt(Math.floor(Math.random() * possible.length)); 
+			}
+			generateRandomTitle(i, logoRandom);
+			logoRandom = '';
+		}
+
+	}, 500 );
+
+}
+</script>
+
+<p class="rand" id="rand">"xxx onna kill streak"</p>
+<!--Divider-->
+
+<hr style="margin: 0 auto;width: 500px"><!--Social Links-->
+<div><a href="https://steamcommunity.com/id/og-">steam</a> <a href="https://twitter.com/aidenxvx">twitter</a></div>
+<!--End Social Links-->
+<!--Randomized quote/flavour text thingy-->
+
+
+</body></html>
